@@ -5,8 +5,6 @@ from pyrogram.handlers import MessageHandler
 # Create a new Client instance
 app = Client("MakeUserBot")
 
-await app.send_message("@xXACRVXx", "Hola **PY**")
-
 @app.on_message(filters.text & filters.private)
 async def echo(client, message):
     if message.startswith("reply"):
