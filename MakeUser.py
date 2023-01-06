@@ -12,10 +12,10 @@ async def echo(client, message):
     await message.reply(f"Mhmm {message.reply}")
 
 
-async def main():
-    async with app:
-        # Send a message, Markdown is enabled by default
-        await app.send_message("me", "Hola **PY**")
+# async def main():
+#     async with app:
+#         # Send a message, Markdown is enabled by default
+#         await app.send_message("me", "Hola **PY**")
 
 
 app.run()
