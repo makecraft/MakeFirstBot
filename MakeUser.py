@@ -1,12 +1,18 @@
-from pyrogram import Client, filters
+rom pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
+from pyrogram.enums.parse_mode import ParseMode
+from pyrogram.handlers import MessageHandler
+from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
+import subprocess
 
 # Create a new Client instance
 app = Client("MakeUserBot")
 
 @app.on_message(filters.text & filters.private)
 async def echo(client, message):
-    await message.reply(f"Mhmm {message.reply}")
+    if message.startswith("reply"):
+        texto = message.text
+        await message.reply(f"Mhmm {texto.replace("reply", "")}")
 
 
 # async def main():
