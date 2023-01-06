@@ -1,8 +1,6 @@
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 
-#delete the api_id puto :/
-
 # Create a new Client instance
 app = Client("MakeUserBot")
 
