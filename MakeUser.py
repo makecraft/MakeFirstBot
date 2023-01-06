@@ -1,4 +1,4 @@
-rom pyrogram import Client, filters
+from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 from pyrogram.enums.parse_mode import ParseMode
 from pyrogram.handlers import MessageHandler
@@ -12,7 +12,7 @@ app = Client("MakeUserBot")
 async def echo(client, message):
     if message.startswith("reply"):
         texto = message.text
-        await message.reply(f"Mhmm {texto.replace("reply", "")}")
+        await message.reply(f"Mhmm {texto.replace('reply', '')}")
 
 
 # async def main():
