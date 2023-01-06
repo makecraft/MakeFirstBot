@@ -1,8 +1,7 @@
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 
-api_id = 25678670
-api_hash = "4d9ee276782a421e54c8304c5189797e"
+#delete the api_id puto :/
 
 # Create a new Client instance
 app = Client("MakeUserBot")
