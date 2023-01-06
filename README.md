@@ -1,2 +1,4 @@
 # MakeFirstBot
-Mi primer bot 
+# Usando Pyrogram
+Mi primer bot de Pyrogram
+
