@@ -10,8 +10,8 @@ with app:
 
 @app.on_message(filters.text & filters.private)
 async def echo(client, message):
-    if message.text.startswith("reply"):
-        texto = message.text
+    texto = message.text
+    if texto.startswith("reply"): 
         await message.reply(f"BOT: {texto.replace('reply', '')}")
 
 
