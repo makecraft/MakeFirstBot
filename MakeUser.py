@@ -1,24 +1,33 @@
+# imports from standar librery
+import time
+
+# imports from pyrogram
 from pyrogram import Client, filters
 from pyrogram.handlers import MessageHandler
 
 
-# Create a new Client instance
+# create a new client instance
 app = Client("MakeUserBot")
 
+# with app XD
 with app:
-    app.send_message("@xXACRVXx", "Hola **PY**")
+    starting_message = "BOT STARTING"
+    print(starting_message)
+    app.send_message("@xXACRVXx", starting_message)
 
-@app.on_message(filters.text & filters.private)
+# say message (cambiar)
+@app.on_message(filters.text)
 async def echo(client, message):
     text = message.text
-    if text.startswith("reply"): 
-        await message.reply(f"BOT: {text.replace('reply', '')}")
+    if text.startswith(".say"): 
+        await message.reply(f"BOT: {text.replace('.say', '')}")
 
+# execute commands in the shell of system (the ingles is mi pasion XD)
+@app.on_message(filters.regex(".sh"))
+async def shellcmd(client, message):
+    text = message.text
+    #if text.startswith("!sh "):
 
-# async def main():
-#     async with app:
-#         # Send a message, Markdown is enabled by default
-#         await app.send_message("me", "Hola **PY**")
 
 
 app.run()
