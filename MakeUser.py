@@ -1,5 +1,7 @@
-# imports from standar librery
+# imports from python3.11 standar librery
 import time
+import os
+import sys
 import subprocess
 
 # imports from pyrogram
@@ -9,17 +11,30 @@ from pyrogram.enums.parse_mode import ParseMode
 from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 ###################### end imports ######################
 
+
 # ボット管理者のテレグラム ID リスト
 sudo_list = []
 
 # create a new client instance
 app = Client("MakeUserBot")
 
+
 # with app XD
 with app:
-    starting_message = "BOT STARTING"
+    os.system("clear")
+    starting_message ="""
+##########################################
+
+         この ボット 和 ご覧 の 
+    スポンサあ の 提供 で お送りします
+
+     Telegram Etecsa Github xXACRVXx
+"""
     print(starting_message)
+    
     app.send_message("@xXACRVXx", starting_message)
+
+
 
 # say message (cambiar)
 @app.on_message(filters.text)
@@ -32,6 +47,8 @@ async def echo(client, message):
             pass
     except Exception as e:
         print(e)
+
+
 
 # execute commands in the shell of system (the ingles is mi pasion XD)
 @app.on_message(filters.regex(".sh"))
